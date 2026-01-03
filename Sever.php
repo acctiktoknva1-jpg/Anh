@@ -1,17 +1,18 @@
 <?php
 header('Content-Type: application/json');
 
-// Bật / tắt server tại đây
+/*
+  true  = SERVER LIVE  (tool chạy)
+  false = SERVER OFFLINE (tool dừng)
+*/
 $server_on = true;
 
 if ($server_on) {
     echo json_encode([
-        "status" => "success",
-        "message" => "Server is live"
+        "status" => "success"
     ]);
 } else {
     echo json_encode([
-        "status" => "offline",
-        "message" => "Server is down"
+        "status" => "offline"
     ]);
 }
